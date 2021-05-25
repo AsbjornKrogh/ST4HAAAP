@@ -7,43 +7,59 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Name="LoginWindow" x:Class="Presentation_Login.MainWindow"
         mc:Ignorable="d"
         Title="Viborg Høreklinik" Height="290" Width="800" Closing="LoginWindow_Closing">
-    <Grid Margin="0,0,0,0">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="0*"/>
-        </Grid.RowDefinitions>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="231*"/>
+            <ColumnDefinition Width="619*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="50,0,50,0">
+            <Label Content="Staff Login" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                <TextBox x:Name="MedarbejderIDTB" Margin="10,10,10,0" Height="25" Grid.Column="1" Text="" TextWrapping="Wrap" BorderBrush="Black" VerticalContentAlignment="Center"/>
+                <Label Content="Staff Id: " FontSize="15" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Password: " FontSize="15" VerticalAlignment="Center"/>
+                <PasswordBox x:Name="PasswordTB" Margin="10,10,10,0" Height="25"
+                         BorderBrush="Black" KeyUp="PasswordTB_KeyUp" Grid.Column="1" >
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5 8 8 5"/>
+                    </Style>
+                </PasswordBox.Resources>
+            </PasswordBox>
+        </Grid>
 
+        <Grid>
+            <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="0.5*"/>
+               <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="logInB" Margin="10" Height="25" Content="Log in" Click="LoginDB_Click" BorderBrush="Black" FontWeight="Bold" Foreground="White" Grid.Column="1">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="0.1,9">
+                        <GradientStop Color="#FF589CF1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
 
-        <TextBox x:Name="MedarbejderIDTB" Text="" TextWrapping="Wrap" BorderBrush="Black" VerticalContentAlignment="Center" Margin="368,98,264,0" Height="26" VerticalAlignment="Top"/>
-        <Label Content="Staff Id: " Margin="273,95,462,100"/>
+        </Grid>
 
-        <PasswordBox x:Name="PasswordTB" VerticalContentAlignment="Center"
-                 BorderBrush="Black" KeyUp="PasswordTB_KeyUp" Margin="368,129,264,0" Width="168" Height="26" VerticalAlignment="Top">
-            <PasswordBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5 8 8 5"/>
-                </Style>
-            </PasswordBox.Resources>
-        </PasswordBox>
-        <Label Content="Password: " Margin="273,132,461,63"/>
-
-        <Button Margin="367,160,265,0" x:Name="logInB" Content="Log in" Click="LoginDB_Click" BorderBrush="Black" FontWeight="Bold" Foreground="White" Height="38" VerticalAlignment="Top">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,1" EndPoint="0.1,9">
-                    <GradientStop Color="#FF5A6699" Offset="1"/>
-                    <GradientStop Color="#FF589CF1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <syncfusion:Clock HorizontalAlignment="Left" Margin="16,18,0,0" VerticalAlignment="Top" Height="190" Width="178"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="254" FontSize="40" FontWeight="Bold" TextAlignment="Center"><Run Language="da-dk" Text="S"/><Run Text="taff login"/></TextBlock>
-    </Grid>
+        </StackPanel>
+        
+        <syncfusion:Clock HorizontalAlignment="Left" Margin="16,18,0,0" VerticalAlignment="Center" Height="190" Width="178"/>
+         </Grid>
 </Window>
