@@ -52,11 +52,11 @@ namespace Presentation_Technician
           VelkommenL.Visibility = Visibility.Visible;
           HovedmenuB.IsEnabled = false;
 
-          //Todo tilføj alle knapper her:
           ManageHAB.IsEnabled = true;
           ScanB.IsEnabled = true;
           ProcesB.IsEnabled = true;
-        }
+          PrintB.IsEnabled = true;
+      }
 
         private void ManageHAB_Click(object sender, RoutedEventArgs e)
         {
@@ -64,7 +64,6 @@ namespace Presentation_Technician
             VelkommenL.Visibility = Visibility.Collapsed;
             ManageHAB.IsEnabled = false;
 
-            //Todo tilføj alle knapper her:
             HovedmenuB.IsEnabled = true;
             ScanB.IsEnabled = true;
             ProcesB.IsEnabled = true;
@@ -77,7 +76,6 @@ namespace Presentation_Technician
             VelkommenL.Visibility = Visibility.Collapsed;
             ScanB.IsEnabled = false;
 
-            //Todo tilføj alle knapper her:
             HovedmenuB.IsEnabled = true;
             ManageHAB.IsEnabled = true;
             ProcesB.IsEnabled = true;
@@ -91,7 +89,6 @@ namespace Presentation_Technician
             VelkommenL.Visibility = Visibility.Collapsed;
             PrintB.IsEnabled = false;
 
-            //Todo tilføj alle knapper her:
             HovedmenuB.IsEnabled = true;
             ManageHAB.IsEnabled = true;
             ProcesB.IsEnabled = true;
@@ -110,7 +107,6 @@ namespace Presentation_Technician
             VelkommenL.Visibility = Visibility.Collapsed;
             ProcesB.IsEnabled = false;
 
-            //Todo tilføj alle knapper her:
             HovedmenuB.IsEnabled = true;
             ManageHAB.IsEnabled = true;
             PrintB.IsEnabled = true;

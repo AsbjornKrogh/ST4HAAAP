@@ -44,14 +44,9 @@ namespace Presentation_Technician
         private RawEarScan rawEarScan;
         private ModelImporter modelImporter;
         private FullRawEarScan fullRawEarScan;
-        private BinaryFormatter binaryFormatter;
-        private JsonSerializer jsonSerializer;
-        private QuantumConcepts.Formats.StereoLithography.STLDocument stlDocument = new STLDocument(); 
 
-        //Venstre øreafstøbning
-        //private const string MODEL_PATH = "Mold_for_Ear_V1.7_L.stl";
 
-        //Højre øreafstøbning
+        //Øreafstøbning
         private const string MODEL_PATH = "Mold_for_Ear_V1.7_R.stl";
 
         public ScanPage(IClinicDB db, IScanner scanner, StaffLogin technician)
@@ -64,9 +59,6 @@ namespace Presentation_Technician
             uc4_scan = new UC4_Scan(this.db, scanner);
 
             modelImporter = new ModelImporter();
-            binaryFormatter = new BinaryFormatter();
-            jsonSerializer = new JsonSerializer();
-
         }
 
         #region Hent metoder

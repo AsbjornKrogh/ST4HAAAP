@@ -38,7 +38,6 @@ namespace Presentation_Technician
          this.db = db;
          uc3_ShowHATech = new UC3_ShowHATech(db);
          uc3_UpdateHATech = new UC3_UpdateHATech(db);
-         ShowHAInfoB.IsEnabled = false;
          RedigerB.IsEnabled = false;
          patientInfoTB.IsEnabled = false;
       }
@@ -109,51 +108,8 @@ namespace Presentation_Technician
          {
             patientInfoTB.Text = "Det indtastede PCPR nummer findes ikke i databasen";
          }
-
-         ShowHAInfoB.IsEnabled = true;
-
       }
 
-      private void ShowHAInfoB_Click(object sender, RoutedEventArgs e)
-      {
-      //   if (HAList.SelectedIndex == -1)
-      //   {
-      //      MessageBox.Show("Vælg et høreapparat og prøv igen", "Information");
-      //   }
-      //   else
-      //   {
-      //      GeneralSpec selectedGeneralSpec = (GeneralSpec)patientAndHA.GeneralSpecs[HAList.SelectedIndex];
-      //      TecnicalSpec selectedTecnicalSpec = (TecnicalSpec)patientAndHA.TecnicalSpecs[HAList.SelectedIndex];
-
-      //      TypeTB.Text = selectedGeneralSpec.Type.ToString();
-      //      ColorTB.Text = selectedGeneralSpec.Color.ToString();
-      //      GenDateTB.Text = selectedGeneralSpec.CreateDate.ToShortDateString();
-
-      //      TechDateTB.Text = selectedTecnicalSpec.CreateDate.ToShortDateString();
-
-      //      //Todo Kommenter dette ind
-      //      //if (selectedTecnicalSpec.RawEarScan == null)
-      //      //{
-      //      //    PrintStatusTB.Text = "Ikke scannet endnu";
-      //      //}
-      //      //else
-      //      //{
-      //      if (selectedTecnicalSpec.Printed == false)
-      //      {
-
-      //         PrintStatusTB.Text = "Ikke printet endnu";
-      //      }
-
-      //      if (selectedTecnicalSpec.Printed == true)
-      //      {
-
-      //         PrintStatusTB.Text = "Printet";
-      //      }
-
-      //      //}
-      //      RedigerB.IsEnabled = true;
-      //   }
-      }
 
       private void RedigerB_Click(object sender, RoutedEventArgs e)
       {
