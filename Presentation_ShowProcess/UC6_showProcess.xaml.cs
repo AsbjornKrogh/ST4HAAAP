@@ -71,6 +71,7 @@ namespace Presentation_ShowProcess
             Loading.Spin = false;
             okIsRunning = false;
 
+            StatusStack.Visibility = Visibility.Visible;
             StatusL.Visibility = Visibility.Visible;
 
             procesSpec = (List<ProcesSpec>)e.Result;

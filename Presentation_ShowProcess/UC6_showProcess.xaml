@@ -14,7 +14,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <StackPanel Margin="250,20,250,0">
+        <StackPanel Margin="250,0,250,0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
@@ -31,7 +31,7 @@
                 </TextBox>
             </Grid>
 
-            <Button x:Name="OKB" FontSize="15" Content="Vis status" Click="OKB_Click" Margin="15">
+            <Button x:Name="OKB" FontSize="15" Content="Vis status" Click="OKB_Click" Margin="15,5,15,5">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -42,7 +42,7 @@
 
         </StackPanel>
         
-            <StackPanel Grid.Row="1" Margin="250,0,250,0">
+            <StackPanel x:Name="StatusStack" Grid.Row="1" Margin="250,0,250,0" Visibility="Collapsed">
             <Label Content="Status" HorizontalAlignment="Center" FontSize="20"></Label>
             <Grid>
                 <Grid.ColumnDefinitions>
