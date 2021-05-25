@@ -55,6 +55,7 @@ namespace Presentation_Clinician
          generalSpec.CreateDate = DateTime.Now;
          generalSpec.StaffLoginFK = _clinicianMainWindow.clinician.StaffID;
          //generalSpec.StaffLogin = _clinicianMainWindow.clinician;
+         
          CbNewColor.Text = generalSpec.Color.ToString();
          CbNewType.Text = generalSpec.Type.ToString();
 
