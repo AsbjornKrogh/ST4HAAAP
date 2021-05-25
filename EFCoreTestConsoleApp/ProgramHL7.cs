@@ -19,14 +19,14 @@ namespace EFCoreTestConsoleApp
          name.Use = Hl7.Fhir.Model.HumanName.NameUse.Official;
          //name.Prefix = new string[] { "Mr" };
          //name.Given = new string[] { "Test" };
-         name.Text = "Test";
-         name.Family = "Patient 2";
+         name.Text = "Bente";
+         name.Family = "Pip";
 
          newHL7Patient.Name.Add(name);
 
          //PCPR
          Identifier id = new Identifier();
-         id.Value = "123456-1221";
+         id.Value = "123456-4444";
 
          newHL7Patient.Identifier.Add(id);
 

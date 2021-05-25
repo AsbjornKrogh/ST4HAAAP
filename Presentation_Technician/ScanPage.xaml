@@ -27,7 +27,7 @@
                 <ColumnDefinition Width="1.25*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-                <Label Content="Høreafstøbnings ID: " FontSize="15" Margin="5,5,5,5"></Label>
+                <Label Content="Høreafstøbnings ID: " Margin="5,5,5,5"></Label>
                 <TextBox x:Name="HACastIDTB" FontSize="15" Grid.Column="1" Margin="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="Border">
@@ -51,9 +51,9 @@
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label FontSize="15" Content="Patientinformationer:"></Label>
+                <Label Content="Patientinformationer:"></Label>
 
-                <TextBox Grid.Column="1" FontSize="15" x:Name="PatientInformationTB" Visibility="Collapsed" Height ="50" Margin="5,5,5,5">
+                <TextBox Grid.Column="1"  x:Name="PatientInformationTB" Visibility="Collapsed" Margin="5,5,5,5">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -76,18 +76,12 @@
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
-            <h:HelixViewport3D x:Name="EarScan" MinHeight="275">
+            <h:HelixViewport3D x:Name="EarScan" MinHeight="230">
             <h:SunLight/>
             <ModelVisual3D x:Name="Visual3D">
                 <ModelVisual3D.Content>
                     <GeometryModel3D>
-                        <!--GeometryModel3D.Material>
-                            <DiffuseMaterial x:Name="matDiffuseMain">
-                                <DiffuseMaterial.Brush>
-                                    <SolidColorBrush Color="Gray"/>
-                                </DiffuseMaterial.Brush>
-                            </DiffuseMaterial>
-                        </>-->
+                        
                     </GeometryModel3D>
                 </ModelVisual3D.Content>
                 <ModelVisual3D.Transform>
@@ -110,7 +104,7 @@
                         </Transform3DGroup>
                 </ModelVisual3D.Transform>
             </ModelVisual3D>
-            <!--h:GridLinesVisual3D Width="15" Length="15" MinorDistance="1" MajorDistance="1" Thickness="0.01"/>-->
+            
         </h:HelixViewport3D>
 
             <Grid>
@@ -142,7 +136,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1">
-        <Button x:Name="GemB" Content="Gem scanning"  Margin="20,0,20,10" FontSize="20" Click="GemB_Click" IsEnabled="False">
+        <Button x:Name="GemB" Content="Gem scanning"  Margin="5,0,5,5" FontSize="20" Click="GemB_Click" IsEnabled="False">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5 5 5 5"/>
