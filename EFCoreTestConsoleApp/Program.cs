@@ -17,7 +17,7 @@ namespace EFCoreTestConsoleApp
 
          ProgramHL7 program = new ProgramHL7();
 
-         program.metode();
+        // program.metode();
 
 
          #region Create (CRUD)
@@ -25,12 +25,12 @@ namespace EFCoreTestConsoleApp
          #region Create patient
          Patient newPatient = new Patient()
          {
-            CPR = "123456-4321",
-            Name = "Perfekt",
-            Lastname = "Person",
-            Adress = "Testvej 15",
-            zipcode = 8200,
-            Age = 25,
+            CPR = "123456-2332",
+            Name = "Accepttest",
+            Lastname = "Patient",
+            Adress = "Testvej 1",
+            zipcode = 4321,
+            Age = 20,
             City = "TestBy",
             Email = "test@test.dk",
             MobilNummer = "30405060"
