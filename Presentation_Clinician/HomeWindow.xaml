@@ -8,7 +8,6 @@
         Title="Hovedmenu" Height="450" Width="800">
     <Grid>
         <Label Content="Indtast patientens CPR-nummer" HorizontalAlignment="Left" Margin="165,179,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox x:Name="TbWelcome" HorizontalAlignment="Center" Margin="0,121,0,0" Text="Velkommen XXXXXX" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" BorderBrush="{x:Null}" FontSize="20"/>
 
 
         <TextBox x:Name="TbCPRnumber" HorizontalAlignment="Left" Margin="400,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize="14" Height="24">
@@ -31,6 +30,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="Patient Login" FontWeight="Bold" FontSize="29" HorizontalAlignment="Left" Margin="306,37,0,0" VerticalAlignment="Top"/>
+        <Label Content="Patient Login" FontWeight="Bold" FontSize="29" HorizontalAlignment="Left" Margin="135,111,0,0" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Center" Height="40" Stroke="#FFBFE1FD" VerticalAlignment="Top" Width="800" Fill="#FFA1D0F7"/>
     </Grid>
 </Window>

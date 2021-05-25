@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CoreEFTest.Models;
 using BLL_Clinician;
+using DLL_Clinician;
 
 namespace Presentation_Clinician
 {
@@ -19,20 +20,19 @@ namespace Presentation_Clinician
    /// </summary>
    public partial class OrderNewHA : Window
    {
-      UC3_ManageHA manageHA = new UC3_ManageHA();
+       UC3_ManageHA _manageHA = new UC3_ManageHA(new ClinicDatabase());
 
-      private ClinicianMainWindow _clinicianMainWindow;
-      private GeneralSpec generalSpec;
-      private EarCast earCast;
+       private ClinicianMainWindow _clinicianMainWindow;
+       private GeneralSpec generalSpec;
+       private EarCast earCast;
 
-      public OrderNewHA(ClinicianMainWindow clinicianMainWindow, UC3_ManageHA manageHa)
+        public OrderNewHA(ClinicianMainWindow clinicianMainWindow, UC3_ManageHA manageHa)
       {
           InitializeComponent();
 
-            this._clinicianMainWindow = clinicianMainWindow;
-            this.manageHA = manageHa;
-
-      }
+          _clinicianMainWindow = clinicianMainWindow;
+          _manageHA = manageHa;
+        }
 
       private void BtnSave_Click(object sender, RoutedEventArgs e)
       {
@@ -62,20 +62,16 @@ namespace Presentation_Clinician
          earCast.PatientFK = _clinicianMainWindow.Patient.PatientId;
          //earCast.Patient = _clinicianMainWindow.Patient;
 
-         manageHA.CreateHA(generalSpec);
+         _manageHA.CreateHA(generalSpec);
 
-         manageHA.createEC(earCast);
+         _manageHA.createEC(earCast);
 
          CbNewType.SelectedIndex = -1;
          CbNewColor.SelectedIndex = -1;
+         Cb_LeftEar.IsChecked = false;
+         Cb_RightEar.IsChecked = false;
 
-            MessageBox.Show("Høreapparatet er bestilt","Bekræftigelse",MessageBoxButton.OK,MessageBoxImage.Information);
-
-            
-
+          MessageBox.Show("Høreapparatet er bestilt","Bekræftigelse",MessageBoxButton.OK,MessageBoxImage.Information);
       }
-
-      
-
    }
 }
