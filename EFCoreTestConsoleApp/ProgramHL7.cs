@@ -43,7 +43,6 @@ namespace EFCoreTestConsoleApp
          Date BD = new Date(2000, 02, 20);
          
          newHL7Patient.BirthDateElement = BD;
-         newHL7Patient.BirthDate = "25";
 
          client.CreateHl7FHIRPatient(newHL7Patient);
 

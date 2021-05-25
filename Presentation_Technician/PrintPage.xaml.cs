@@ -48,6 +48,7 @@ namespace Presentation_Technician
 
          uc5_print = new UC5_Print(db, printer);
          PrintB.IsEnabled = false;
+         PatientInformationTB.IsEnabled = false;
 
       }
 
@@ -101,7 +102,7 @@ namespace Presentation_Technician
          {
             if (tecnicalSpec != null)
             {
-               PatientInformationLB.Items.Add("PID: " + tecnicalSpec.PatientFK + "\r\nØre: " + tecnicalSpec.EarSide);
+               PatientInformationLB.Items.Add("Patient ID: " + tecnicalSpec.PatientFK + "\r\nØre: " + tecnicalSpec.EarSide);
             }
             else
             {
@@ -120,7 +121,7 @@ namespace Presentation_Technician
       {
          if (CPRnummerTB.Text == "")
          {
-            MessageBox.Show("Indtast et PCPR-nummer", "Fejl");
+            MessageBox.Show("Indtast et CPR-nummer", "Fejl");
          }
          else
          {
@@ -169,7 +170,7 @@ namespace Presentation_Technician
             {
                if (count == 0)
                {
-                  PatientInformationTB.Text = "PID: " +
+                  PatientInformationTB.Text = "Patient ID: " +
                                               tecnicalSpec.PatientFK+ /*"\r\nNavn: " + tecnicalSpec.Patient.Name + " " + tecnicalSpec.Patient.Lastname +*/
                                               "\r\nØre: " + tecnicalSpec.EarSide;
                   count++;

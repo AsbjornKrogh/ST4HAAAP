@@ -33,7 +33,7 @@ namespace DLL_Technician
                 return false;
             }
         }
-
+        
         public RawEarScan StartScanning(Ear earside)
         {
             earscan = new RawEarScan();
