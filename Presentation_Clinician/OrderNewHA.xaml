@@ -5,38 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation_Clinician"
         mc:Ignorable="d"
-        Title="Klinik Portalen" Height="450" Width="800">
+        Title=" Portale" Height="450" Width="800">
     <Grid>
-        <Button x:Name="BtnSaveNewHA" Content="Gem" HorizontalAlignment="Left" Margin="68,317,0,0" VerticalAlignment="Top" Height="31" Width="76" Click="BtnSave_Click" RenderTransformOrigin="0.507,1.742"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="23,177,0,0" VerticalAlignment="Top"/>
-        <Label Content="Farve" HorizontalAlignment="Left" Margin="24,215,0,0" VerticalAlignment="Top"/>
-        <Label Content="Type" HorizontalAlignment="Left" Margin="24,242,0,0" VerticalAlignment="Top"/>
-        <Label Content="Bestil et nyt høreapparat" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <CheckBox x:Name="Cb_LeftEar" Content="Venstre øre" HorizontalAlignment="Left" Margin="35,115,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="Cb_RightEar" Content="Højre øre" HorizontalAlignment="Left" Margin="35,135,0,0" VerticalAlignment="Top"/>
-        <Label Content="Step 1: Vælg øre" HorizontalAlignment="Left" Margin="24,74,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Step 2: Design høreapparat" HorizontalAlignment="Left" Margin="24,181,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <StackPanel>
-            <ComboBox x:Name="CbNewColor" HorizontalAlignment="Left" Margin="69,215,0,0" VerticalAlignment="Top" Width="120">
-                <ComboBoxItem>Lightpale</ComboBoxItem>
-                <ComboBoxItem>Pale</ComboBoxItem>
-                <ComboBoxItem>Honey</ComboBoxItem>
-                <ComboBoxItem>Tanned</ComboBoxItem>
-                <ComboBoxItem>Almond</ComboBoxItem>
-                <ComboBoxItem>Brown</ComboBoxItem>
-                <ComboBoxItem>Dark brown</ComboBoxItem>
-                <ComboBoxItem>Black</ComboBoxItem>
-                <ComboBoxItem>Dark black</ComboBoxItem>
-            </ComboBox>
-        </StackPanel>
-        <StackPanel>
-            <ComboBox x:Name="CbNewType" HorizontalAlignment="Left" Margin="69,246,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem>Silhuet</ComboBoxItem>
-            <ComboBoxItem>Anti allergi</ComboBoxItem>
-            <ComboBoxItem>Blød</ComboBoxItem>
-            <ComboBoxItem>Titan</ComboBoxItem>
-            <ComboBoxItem>Termotec</ComboBoxItem>
-            </ComboBox>
-        </StackPanel>
+        <Button x:Name="BtnSaveNewHA" Content="Gem" HorizontalAlignment="Left" Margin="460,302,0,0" VerticalAlignment="Top" Height="35" Width="76" Click="BtnSave_Click" RenderTransformOrigin="0.507,1.742" FontSize="14" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10,10,10,10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Content="" HorizontalAlignment="Left" Margin="42,206,0,0" VerticalAlignment="Top"/>
+        <Label Content="Farve" HorizontalAlignment="Left" Margin="30,244,0,0" VerticalAlignment="Top" Width="51" FontSize="14"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="31,283,0,0" VerticalAlignment="Top" FontSize="14" Width="52"/>
+        <Label Content="Bestil et nyt høreapparat" HorizontalAlignment="Left" Margin="31,31,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <CheckBox x:Name="Cb_LeftEar" Content="Venstre øre" HorizontalAlignment="Left" Margin="41,136,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <CheckBox x:Name="Cb_RightEar" Content="Højre øre" HorizontalAlignment="Left" Margin="41,162,0,0" VerticalAlignment="Top" FontSize="14" Width="90"/>
+        <Label Content="Step 1: Vælg øre" HorizontalAlignment="Left" Margin="35,97,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontStyle="Italic"/>
+        <Label Content="Step 2: Design høreapparat" HorizontalAlignment="Left" Margin="31,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" FontStyle="Italic"/>
+
+        <ComboBox x:Name="CbNewColor" HorizontalAlignment="Left" Margin="88,248,0,0" VerticalAlignment="Top" Width="144" Height="22">
+            <ComboBoxItem>Lightpale</ComboBoxItem>
+            <ComboBoxItem>Pale</ComboBoxItem>
+            <ComboBoxItem>Honey</ComboBoxItem>
+            <ComboBoxItem>Tanned</ComboBoxItem>
+            <ComboBoxItem>Almond</ComboBoxItem>
+            <ComboBoxItem>Brown</ComboBoxItem>
+            <ComboBoxItem>Dark brown</ComboBoxItem>
+            <ComboBoxItem>Black</ComboBoxItem>
+            <ComboBoxItem>Dark black</ComboBoxItem>
+        </ComboBox>
+
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="35,73,0,0" Stroke="Black" VerticalAlignment="Top" Width="501" Fill="#FF080808" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <ComboBox x:Name="CbNewType" HorizontalAlignment="Left" Margin="88,290,0,0" VerticalAlignment="Top" Width="144">
+            <ComboBoxItem Content="Silhuet"/>
+            <ComboBoxItem Content="Anti allergi"/>
+            <ComboBoxItem Content="Blød"/>
+            <ComboBoxItem Content="Titan"/>
+            <ComboBoxItem Content="Termotec"/>
+        </ComboBox>
+
     </Grid>
 </Window>

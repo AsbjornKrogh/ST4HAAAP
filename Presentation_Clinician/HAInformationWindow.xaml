@@ -5,29 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation_Clinician"
         mc:Ignorable="d"
-        Title="HAInformationWindow" Height="450" Width="800">
+        Title="" Height="450" Width="800">
     <Grid x:Name="HAInformationWindow1" Loaded="HAInformationWindow1_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="438*"/>
             <ColumnDefinition Width="23*"/>
             <ColumnDefinition Width="339*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="Lb_OldHearingRight" Margin="14,102,248,184"/>
-        <Label Content="Højre øre" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.411,-3.054"/>
-        <ListBox x:Name="Lb_OldHearingLeft" Margin="241,102,18,184" IsSynchronizedWithCurrentItem="False"/>
-        <Label Content="Venstre øre" HorizontalAlignment="Left" Margin="241,71,0,0" VerticalAlignment="Top" Width="163"/>
-        <Button x:Name="btn_ShowOldAid" Content="Vis " HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Width="78" Click="btn_ShowOldAid_Click" Height="28"/>
-        <TextBox x:Name="Tb_EarSide" Grid.Column="2" HorizontalAlignment="Left" Margin="150,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Øre" Grid.Column="2" HorizontalAlignment="Left" Margin="61,114,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tb_Color" Grid.Column="2" HorizontalAlignment="Left" Margin="150,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Farve" Grid.Column="2" HorizontalAlignment="Left" Margin="61,164,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tb_Type" Grid.Column="2" HorizontalAlignment="Left" Margin="150,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Type" Grid.Column="2" HorizontalAlignment="Left" Margin="61,140,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tb_ID" Grid.Column="2" HorizontalAlignment="Left" Margin="150,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="ID" Grid.Column="2" HorizontalAlignment="Left" Margin="61,186,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tb_CreateDate" Grid.Column="2" HorizontalAlignment="Left" Margin="150,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Dato" Grid.Column="2" HorizontalAlignment="Left" Margin="61,213,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Tb_StaffID" Grid.Column="2" HorizontalAlignment="Left" Margin="150,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Personale ID" Grid.Column="2" HorizontalAlignment="Left" Margin="61,237,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="Lb_OldHearingRight" Margin="224,144,38,98"/>
+        <Label Content="Højre øre" HorizontalAlignment="Left" Margin="224,111,0,0" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.411,-3.054" FontWeight="Bold" FontSize="14" Height="28"/>
+        <ListBox x:Name="Lb_OldHearingLeft" Margin="23,144,236,98" IsSynchronizedWithCurrentItem="False"/>
+        <Label Content="Venstre øre" HorizontalAlignment="Left" Margin="23,111,0,0" VerticalAlignment="Top" Width="163" FontWeight="Bold" FontSize="14" Height="28"/>
+        <Button x:Name="btn_ShowOldAid" Content="Vis " HorizontalAlignment="Center" Margin="0,353,0,0" VerticalAlignment="Top" Width="78" Click="btn_ShowOldAid_Click" Height="32" FontWeight="Bold" FontSize="14">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10,10,10,10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox x:Name="Tb_EarSide" Grid.Column="2" HorizontalAlignment="Left" Margin="147,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+        <Label Content="Øre" Grid.Column="2" HorizontalAlignment="Left" Margin="40,145,0,0" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="Tb_Color" Grid.Column="2" HorizontalAlignment="Left" Margin="147,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Label Content="Farve" Grid.Column="2" HorizontalAlignment="Left" Margin="40,203,0,0" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="Tb_Type" Grid.Column="2" HorizontalAlignment="Left" Margin="147,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Label Content="Type" Grid.Column="2" HorizontalAlignment="Left" Margin="40,174,0,0" VerticalAlignment="Top" Height="24"/>
+        <TextBox x:Name="Tb_ID" Grid.Column="2" HorizontalAlignment="Left" Margin="147,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+        <Label Content="Høreapparats ID" Grid.Column="2" HorizontalAlignment="Left" Margin="40,231,0,0" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="Tb_CreateDate" Grid.Column="2" HorizontalAlignment="Left" Margin="147,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+        <Label Content="Dato" Grid.Column="2" HorizontalAlignment="Left" Margin="40,282,0,0" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="Tb_StaffID" Grid.Column="2" HorizontalAlignment="Left" Margin="147,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17"/>
+        <Label Content="Personale ID" Grid.Column="2" HorizontalAlignment="Left" Margin="40,311,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label Content="Informationer" Grid.Column="2" Margin="40,111,143,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="28"/>
+        <Rectangle HorizontalAlignment="Left" Height="40" Stroke="#FFBFE1FD" VerticalAlignment="Top" Width="800" Fill="#FFA1D0F7" Grid.ColumnSpan="3"/>
+        <Label Content="Kliniker Portalen" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="{x:Null}" Foreground="White"/>
+        <Label Content="Alle patientens høreapparater" HorizontalAlignment="Left" Margin="22,53,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="25,95,0,0" Stroke="Black" VerticalAlignment="Top" Width="501" Fill="#FF080808" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
     </Grid>
 </Window>
