@@ -91,7 +91,7 @@ namespace Presentation_Technician
             patientInfoTB.Text = "CPR: " + patientAndHA.CPR + "\r\nNavn: " + patientAndHA.Name + " " +
                                  patientAndHA.Lastname + "\r\nAlder: " + patientAndHA.Age;
 
-            foreach (TecnicalSpec spec in patientAndHA.TecnicalSpecs)
+            foreach (GeneralSpec spec in patientAndHA.GeneralSpecs)
             {
                if (spec != null)
                HAList.Items.Add(spec.EarSide.ToString());
@@ -106,7 +106,7 @@ namespace Presentation_Technician
          }
          else
          {
-            patientInfoTB.Text = "Det indtastede PCPR nummer findes ikke i databasen";
+            patientInfoTB.Text = "Det indtastede CPR nummer findes ikke i databasen";
          }
       }
 

@@ -98,40 +98,6 @@ namespace DLL_Technician
       }
 
       /// <summary>
-      /// Der gemmes et specifikt rawEarScan i DB og efterfølgende returneres en bool som fortæller om det er gjort.
-      /// </summary>
-      /// <param name="rawEarPrint"></param>
-      /// <param name="CPR"></param>
-      /// <returns></returns>
-      public bool SavePrint(RawEarPrint rawEarPrint, int PatientId)
-      {
-         try
-         {
-            //Henter specifik techspec tilhørende det givne RawEarPrint og PCPR. 
-            TecnicalSpec Techspec = _dbContext.TecnicalSpecs.OrderBy(x => x.CreateDate).Last(x => x.PatientFK == PatientId && x.EarSide == rawEarPrint.EarSide);
-
-            //Sætter id i RawEarPrint
-            rawEarPrint.TecnicalSpecFK = Techspec.HATechinalSpecID;
-
-            //Gemmer RawEarPrint
-            _dbContext.RawEarPrints.Add(rawEarPrint);
-            _dbContext.SaveChanges();
-
-            // Sætter printed parameteren til true
-            Techspec.Printed = true;
-
-            _dbContext.TecnicalSpecs.Update(Techspec);
-            _dbContext.SaveChanges();
-
-            return _dbContext.RawEarPrints.Contains(rawEarPrint);
-         }
-         catch
-         {
-            return false;
-         }
-      }
-
-      /// <summary>
       /// Er ikke implementeret. 
       /// </summary>
       /// <param name="CPR"></param>
@@ -278,14 +244,15 @@ namespace DLL_Technician
       /// </summary>
       /// <returns></returns>
       public List<TecnicalSpec> GetEarScans()
-      {
+      { 
+         //Oprettelse af listen, som skal returneres
+         List<TecnicalSpec> TechSpeclist = new List<TecnicalSpec>();
+
          try
          {
             //Henter alle techSpec ud af DB'en
             List<TecnicalSpec> DBlist = _dbContext.TecnicalSpecs.ToList();
 
-            //Oprettelse af listen, som skal returneres
-            List<TecnicalSpec> TechSpeclist = new List<TecnicalSpec>();
 
             //For hver techspec som er i listen hentet fra database, tjekkes der på om Prited = false
             foreach (TecnicalSpec tecnicalSpec in DBlist)
@@ -294,16 +261,22 @@ namespace DLL_Technician
                //og lægges i techspec objektet og objektet tilføjes returneringslisten
                if (!tecnicalSpec.Printed)
                {
-                  tecnicalSpec.RawEarScan = _dbContext.RawEarScans.Single(x => x.TecnicalSpecFK == tecnicalSpec.HATechinalSpecID);
-                  tecnicalSpec.GeneralSpec = _dbContext.GeneralSpecs.Single(x => x.HAGeneralSpecID == tecnicalSpec.GeneralSpecFK);
-                  TechSpeclist.Add(tecnicalSpec);
+                  try
+                  {
+                     tecnicalSpec.RawEarScan = _dbContext.RawEarScans.Single(x => x.TecnicalSpecFK == tecnicalSpec.HATechinalSpecID);
+                     tecnicalSpec.GeneralSpec = _dbContext.GeneralSpecs.Single(x => x.HAGeneralSpecID == tecnicalSpec.GeneralSpecFK);
+                     TechSpeclist.Add(tecnicalSpec);
+                  }
+                  catch
+                  {}
+                 
                }
             }
             return TechSpeclist;
          }
          catch
          {
-            return null;
+            return TechSpeclist;
          }
       }
 
@@ -417,7 +390,7 @@ namespace DLL_Technician
       }
 
       /// <summary>
-      /// 
+      /// Der gemmes et specifikt rawEarScan i DB og efterfølgende returneres en bool som fortæller om det er gjort.
       /// </summary>
       /// <param name="rawEarPrint"></param>
       /// <returns></returns>
