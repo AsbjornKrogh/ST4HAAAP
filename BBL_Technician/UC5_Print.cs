@@ -41,7 +41,7 @@ namespace BLL_Technician
         public bool DBPrint(FullRawEarPrint fullRawEarPrint)
         {
            RawEarPrint print;
-         foreach (RawEarScan rawEarScan in fullRawEarPrint.EarScans)
+           foreach (RawEarScan rawEarScan in fullRawEarPrint.EarScans)
            {
             print = new RawEarPrint();
             print.StaffLoginFK = fullRawEarPrint.PrintTechID;
