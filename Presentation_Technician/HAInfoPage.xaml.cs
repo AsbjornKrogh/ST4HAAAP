@@ -99,9 +99,7 @@ namespace Presentation_Technician
 
             if (patientAndHA.TecnicalSpecs[0] == null && patientAndHA.TecnicalSpecs[1] == null)
             {
-               patientInfoTB.Text = "CPR: " + patientAndHA.CPR + "\r\nNavn: " + patientAndHA.Name + " " +
-                                    patientAndHA.Lastname + "\r\nAlder: " + patientAndHA.Age +
-                                    "\r\n\n Ingen scanning fortaget";
+               patientInfoTB.Text += "\r\n Ingen scanning foretaget";
             }
          }
          else

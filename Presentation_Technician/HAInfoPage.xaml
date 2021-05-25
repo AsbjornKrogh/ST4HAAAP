@@ -49,7 +49,7 @@
                     </Button.Resources>
                 </Button>
             </Grid>
-            <fa:ImageAwesome  Grid.Row="0" Margin="375,-15,358,102" Name="Loading" Visibility="Collapsed" Icon="CircleOutlineNotch" Spin="false" SpinDuration="3" Height="40" Width="40" />
+            <fa:ImageAwesome  Grid.Row="0" Margin="375,-45,120,102" Name="Loading" Visibility="Collapsed" Icon="CircleOutlineNotch" Spin="false" SpinDuration="3" Height="40" Width="40" />
         </StackPanel>
 
 
