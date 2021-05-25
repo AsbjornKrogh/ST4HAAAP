@@ -115,6 +115,8 @@ namespace Presentation_Clinician
             }
 
             _clinicianMainWindow.Patient = patient;
+
+            bntUpdate.IsEnabled = false;
         }
 
         private void btn_RedigerTele_Click(object sender, RoutedEventArgs e)
