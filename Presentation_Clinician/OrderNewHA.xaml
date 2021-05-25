@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation_Clinician"
         mc:Ignorable="d"
-        Title=" Portale" Height="450" Width="800">
+        Title=" Portale" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="BtnSaveNewHA" Content="Gem" HorizontalAlignment="Left" Margin="460,302,0,0" VerticalAlignment="Top" Height="35" Width="76" Click="BtnSave_Click" RenderTransformOrigin="0.507,1.742" FontSize="14" FontWeight="Bold">
             <Button.Resources>
@@ -24,15 +24,15 @@
         <Label Content="Step 2: Design høreapparat" HorizontalAlignment="Left" Margin="31,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" FontStyle="Italic"/>
 
         <ComboBox x:Name="CbNewColor" HorizontalAlignment="Left" Margin="88,248,0,0" VerticalAlignment="Top" Width="144" Height="22">
-            <ComboBoxItem>Lightpale</ComboBoxItem>
-            <ComboBoxItem>Pale</ComboBoxItem>
-            <ComboBoxItem>Honey</ComboBoxItem>
+            <!--<ComboBoxItem>Lightpale</ComboBoxItem>
+            <ComboBoxItem>Pale</ComboBoxItem>-->
+            <!--<ComboBoxItem>Honey</ComboBoxItem>
             <ComboBoxItem>Tanned</ComboBoxItem>
             <ComboBoxItem>Almond</ComboBoxItem>
             <ComboBoxItem>Brown</ComboBoxItem>
             <ComboBoxItem>Dark brown</ComboBoxItem>
             <ComboBoxItem>Black</ComboBoxItem>
-            <ComboBoxItem>Dark black</ComboBoxItem>
+            <ComboBoxItem>Dark black</ComboBoxItem>-->
         </ComboBox>
 
         <Rectangle HorizontalAlignment="Left" Height="1" Margin="35,73,0,0" Stroke="Black" VerticalAlignment="Top" Width="501" Fill="#FF080808" RenderTransformOrigin="0.5,0.5">
@@ -46,11 +46,11 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <ComboBox x:Name="CbNewType" HorizontalAlignment="Left" Margin="88,290,0,0" VerticalAlignment="Top" Width="144">
-            <ComboBoxItem Content="Silhuet"/>
+            <!--<ComboBoxItem Content="Silhuet"/>
             <ComboBoxItem Content="Anti allergi"/>
             <ComboBoxItem Content="Blød"/>
             <ComboBoxItem Content="Titan"/>
-            <ComboBoxItem Content="Termotec"/>
+            <ComboBoxItem Content="Termotec"/>-->
         </ComboBox>
 
     </Grid>
