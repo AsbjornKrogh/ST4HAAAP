@@ -31,6 +31,7 @@ namespace Presentation_Technician
        private IPrinter printer;
        public StaffLogin technician { set; get; }
        private TimeStamp timeStamp;
+
        public TechnicianMainWindow()
       {
          InitializeComponent();
@@ -44,7 +45,6 @@ namespace Presentation_Technician
 
          technician = new StaffLogin();
       }
-
 
       private void HovedmenuB_Click(object sender, RoutedEventArgs e)
       {

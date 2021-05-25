@@ -32,10 +32,10 @@ namespace EFCoreTestConsoleApp
 
          //Adresse
          Address address = new Address();
-         address.City = "Vejle";
+         address.City = "Testby";
          address.Country = "DK";
-         address.PostalCode = "6000";
-         address.District = "Vejlevej 17";
+         address.PostalCode = "4321";
+         address.District = "Testveh2";
 
          newHL7Patient.Address.Add(address);
 

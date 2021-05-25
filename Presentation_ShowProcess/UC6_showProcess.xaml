@@ -21,8 +21,8 @@
                     <ColumnDefinition Width="1.4*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Content="PCPR-nummer:"></Label>
-                <TextBox x:Name="CPRTB" Grid.Column="1" IsEnabled="True">
+                <Label FontSize="15" Content="CPR-nummer:"></Label>
+                <TextBox x:Name="CPRTB" FontSize="15" Grid.Column="1" IsEnabled="True">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -31,7 +31,7 @@
                 </TextBox>
             </Grid>
 
-            <Button x:Name="OKB" Content="Vis status" Click="OKB_Click" Margin="10">
+            <Button x:Name="OKB" FontSize="15" Content="Vis status" Click="OKB_Click" Margin="15">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -71,8 +71,8 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Content="Venstre:"></Label>
-                <Label Grid.Column="1" Content="Højre:"></Label>
+                <Label FontSize="15" Content="Venstre:"></Label>
+                <Label  FontSize="15" Grid.Column="1" Content="Højre:"></Label>
             </Grid>
 
             <Grid Name="TwoHATBGrid">
@@ -81,7 +81,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox x:Name="StatusLeftTB" TextWrapping="Wrap">
+                <TextBox FontSize="15" x:Name="StatusLeftTB" TextWrapping="Wrap">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -89,7 +89,7 @@
                     </TextBox.Resources>
                 </TextBox>
 
-                <TextBox Grid.Column="1" x:Name="StatusRightTB" TextWrapping="Wrap">
+                <TextBox FontSize="15" Grid.Column="1" x:Name="StatusRightTB" TextWrapping="Wrap">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -98,7 +98,7 @@
                 </TextBox>
             </Grid>
 
-            <TextBox x:Name="OneHAStatusTB" Visibility="Collapsed" TextWrapping="Wrap">
+            <TextBox FontSize="15" x:Name="OneHAStatusTB" Visibility="Collapsed" TextWrapping="Wrap">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>

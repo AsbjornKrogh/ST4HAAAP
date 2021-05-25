@@ -45,6 +45,9 @@ namespace Presentation_Clinician
             patient.MobilNummer = TBPhonenumber.Text;
 
             uc2ManagePatient.SavePatient(patient);
+
+            _clinicianMainWindow.Patient = uc2ManagePatient.GetPatientInformation(patient.CPR);
+           
             MessageBox.Show("Patienten er gemt i databasen");
 
             BtnSave.IsEnabled = false;
