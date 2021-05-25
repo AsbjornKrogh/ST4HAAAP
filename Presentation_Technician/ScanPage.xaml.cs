@@ -102,7 +102,7 @@ namespace Presentation_Technician
             {
                if (Convert.ToInt32(HACastIDTB.Text) == patientAndHA.EarCasts[0].EarCastID)
                {
-                  PatientInformationTB.Text = "PCPR: " + patientAndHA.CPR + "\r\nNavn: " + patientAndHA.Name + " " +
+                  PatientInformationTB.Text = "CPR: " + patientAndHA.CPR + "\r\nNavn: " + patientAndHA.Name + " " +
                                               patientAndHA.Lastname + "\r\nAlder: " + patientAndHA.Age +
                                               "\r\nØreside: " + patientAndHA.EarCasts[0].EarSide;
                   ScanB.IsEnabled = true;

@@ -27,8 +27,8 @@
                 <ColumnDefinition Width="1.25*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-                <Label Content="Høreafstøbnings ID: " Margin="5,5,5,5"></Label>
-                <TextBox x:Name="HACastIDTB" Grid.Column="1" Margin="5,5,5,5">
+                <Label Content="Høreafstøbnings ID: " FontSize="15" Margin="5,5,5,5"></Label>
+                <TextBox x:Name="HACastIDTB" FontSize="15" Grid.Column="1" Margin="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -50,10 +50,10 @@
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                
-                <Label Content="Patientinformationer:"></Label>
 
-                <TextBox Grid.Column="1" x:Name="PatientInformationTB" Visibility="Collapsed" Height ="50" Margin="5,5,5,5">
+                <Label FontSize="15" Content="Patientinformationer:"></Label>
+
+                <TextBox Grid.Column="1" FontSize="15" x:Name="PatientInformationTB" Visibility="Collapsed" Height ="50" Margin="5,5,5,5">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -64,7 +64,7 @@
 
             </Grid>
 
-            <Button x:Name="ScanB" Content="Scan øreafstøbning" FontSize="15" Margin="5,5,5,5" Click="ScanB_Click" IsEnabled="False">
+            <Button x:Name="ScanB"  Content="Scan øreafstøbning" FontSize="15" Margin="5,5,5,5" Click="ScanB_Click" IsEnabled="False">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>

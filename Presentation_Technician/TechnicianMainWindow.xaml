@@ -6,14 +6,20 @@
         xmlns:fa = "http://schemas.fontawesome.io/icons/"
         xmlns:local="clr-namespace:Presentation_Technician"
         mc:Ignorable="d"
-        Title="Tekniker" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <Frame x:Name="Main" Margin="0,35,0,0" NavigationUIVisibility="hidden"/>
-           
-    <Label x:Name="VelkommenL" Content="Velkommen til tekniker-hovedmenu!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></Label>
-       
-        <StackPanel Orientation="Horizontal" Height ="35" VerticalAlignment="Top">
-            <Button x:Name="HovedmenuB" Content="Hovedmenu" MinWidth="75" Margin="10,0,0,0" Click="HovedmenuB_Click">
+      <Grid.RowDefinitions>
+          <RowDefinition Height="40"></RowDefinition>
+          <RowDefinition Height="50"></RowDefinition>
+          <RowDefinition ></RowDefinition>
+      </Grid.RowDefinitions>
+        <Frame Grid.Row="2" x:Name="Main" Margin="0,10,0,0" NavigationUIVisibility="hidden" Grid.ColumnSpan="2"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="40" Stroke="#FF235B1B" VerticalAlignment="Top" Width="800" Fill="#FF235B1B" Grid.ColumnSpan="2"/>
+        <Label Content="Tekniker Portalen" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="{x:Null}" Foreground="White" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Height ="50"  Background="WhiteSmoke" Grid.ColumnSpan="2">
+            <Button x:Name="HovedmenuB" Content="Hovedmenu" Margin="10,0,0,0" Click="HovedmenuB_Click" Width="100" FontWeight="Bold" FontSize="14" Background="#FFECECEC" BorderBrush="#FFBDBCBC" FontFamily="Segoe UI">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -21,7 +27,7 @@
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="ManageHAB" Content="Manage HA" MinWidth="75" Margin="10,0,0,0" Click="ManageHAB_Click">
+            <Button x:Name="ManageHAB" Content="Manage HA" MinWidth="75" Margin="10,0,0,0" Click="ManageHAB_Click" Width="100" FontWeight="Bold" FontSize="14" Background="#FFECECEC" BorderBrush="#FFBDBCBC" FontFamily="Segoe UI">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -29,7 +35,7 @@
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="ScanB" Content="Scan" MinWidth="50" Margin="10,0,0,0" Click="ScanB_Click">
+            <Button x:Name="ScanB" Content="Scan" MinWidth="50" Margin="10,0,0,0" Click="ScanB_Click" Width="100" FontWeight="Bold" FontSize="14" Background="#FFECECEC" BorderBrush="#FFBDBCBC" FontFamily="Segoe UI">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -37,7 +43,7 @@
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="PrintB" Content="Print" MinWidth="50" Margin="10,0,0,0" Click="PrintB_Click">
+            <Button x:Name="PrintB" Content="Print" MinWidth="50" Margin="10,0,0,0" Click="PrintB_Click" Width="100" FontWeight="Bold" FontSize="14" Background="#FFECECEC" BorderBrush="#FFBDBCBC" FontFamily="Segoe UI">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -45,7 +51,7 @@
                 </Button.Resources>
             </Button>
 
-            <Button x:Name="ProcesB" Content="Vis proces" MinWidth="75" Margin="10,0,0,0" Click="ProcesB_Click">
+            <Button x:Name="ProcesB" Content="Vis proces" MinWidth="75" Margin="10,0,0,0" Click="ProcesB_Click" Width="100" FontWeight="Bold" FontSize="14" Background="#FFECECEC" BorderBrush="#FFBDBCBC" FontFamily="Segoe UI">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -54,6 +60,9 @@
             </Button>
 
         </StackPanel>
-    </Grid>
+
+        <Label x:Name="VelkommenL" Grid.Row="2" Content="Velkommen til tekniker-hovedmenu!" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="30" Grid.Column="1" Margin="124,0,0,0"></Label>
+
+</Grid>
 
 </Window>

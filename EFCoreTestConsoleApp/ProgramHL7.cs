@@ -19,23 +19,23 @@ namespace EFCoreTestConsoleApp
          name.Use = Hl7.Fhir.Model.HumanName.NameUse.Official;
          //name.Prefix = new string[] { "Mr" };
          //name.Given = new string[] { "Test" };
-         name.Text = "Perfekt";
-         name.Family = "Testensen";
+         name.Text = "Test";
+         name.Family = "Patient 2";
 
          newHL7Patient.Name.Add(name);
 
          //PCPR
          Identifier id = new Identifier();
-         id.Value = "123456-0000";
+         id.Value = "123456-1221";
 
          newHL7Patient.Identifier.Add(id);
 
          //Adresse
          Address address = new Address();
-         address.City = "Aarhus N";
+         address.City = "Testby";
          address.Country = "DK";
-         address.PostalCode = "8200";
-         address.District = "Aarhusvej 17";
+         address.PostalCode = "4321";
+         address.District = "Testveh2";
 
          newHL7Patient.Address.Add(address);
 
@@ -43,6 +43,7 @@ namespace EFCoreTestConsoleApp
          Date BD = new Date(2000, 02, 20);
          
          newHL7Patient.BirthDateElement = BD;
+         newHL7Patient.BirthDate = "25";
 
          client.CreateHl7FHIRPatient(newHL7Patient);
 

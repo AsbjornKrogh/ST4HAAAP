@@ -60,8 +60,7 @@ namespace DLL_Clinician
             patient.CPR = Hl7patient.Identifier[0].Value;
             patient.Name = Hl7patient.Name[0].Text;
             patient.Lastname = Hl7patient.Name[0].Family;
-            Date date = Hl7patient.BirthDateElement;
-            //patient.Age = date.
+            patient.Age = Convert.ToInt32(Hl7patient.BirthDate);
             patient.Adress = Hl7patient.Address[0].District;
             patient.City = Hl7patient.Address[0].City;
             patient.zipcode = Convert.ToInt32(Hl7patient.Address[0].PostalCode);

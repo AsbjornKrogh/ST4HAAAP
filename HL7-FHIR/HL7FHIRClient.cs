@@ -14,7 +14,6 @@ namespace HL7_FHIR
       public HL7FHIRClient()
       {
          client = new FhirClient("https://aseecest3fhirservice.azurewebsites.net/");
-         //client = new FhirClient("https://vonk.fire.ly");
          client.Timeout = 120000;
       }
 
