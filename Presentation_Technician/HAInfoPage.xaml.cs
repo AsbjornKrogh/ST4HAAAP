@@ -40,6 +40,7 @@ namespace Presentation_Technician
          uc3_UpdateHATech = new UC3_UpdateHATech(db);
          ShowHAInfoB.IsEnabled = false;
          RedigerB.IsEnabled = false;
+         patientInfoTB.IsEnabled = false;
       }
 
       private void OKB_Click(object sender, RoutedEventArgs e)
