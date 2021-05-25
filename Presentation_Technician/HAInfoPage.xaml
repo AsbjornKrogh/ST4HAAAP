@@ -23,7 +23,7 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="CPRnummerTB" FontSize="20" Grid.Column="1" Text="" TextWrapping="Wrap" Margin="0,0,300,0" VerticalContentAlignment="Center">
+                <TextBox x:Name="CPRnummerTB" FontSize="15" Grid.Column="1" Text="" TextWrapping="Wrap" Margin="0,0,300,0" VerticalContentAlignment="Center">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -31,7 +31,7 @@
                     </TextBox.Resources>
 
                 </TextBox>
-                <Label FontSize="20" Content="CPR-Nummer: "/>
+                <Label FontSize="15" Content="CPR-Nummer: "/>
             </Grid>
 
 
@@ -41,7 +41,7 @@
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name ="OKB" FontSize="20" Content="OK" Grid.Column="1"  HorizontalAlignment="Left" MinWidth="100"  Margin="0,8,0,0" Click="OKB_Click">
+                <Button x:Name ="OKB" FontSize="15" Content="OK" Grid.Column="1"  HorizontalAlignment="Left" MinWidth="100"  Margin="0,8,0,0" Click="OKB_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -62,8 +62,8 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Grid.Row="1">
-                    <Label Content =" Patientinformation" FontSize="20" FontWeight="Bold" Margin="5,0,50,0 " ></Label>
-                    <TextBox x:Name="patientInfoTB" FontSize="20"  Margin="5,0,50,0" Height="200">
+                    <Label Content =" Patientinformation" FontSize="15" FontWeight="Bold" Margin="5,0,50,0 " ></Label>
+                    <TextBox x:Name="patientInfoTB" FontSize="15"  Margin="5,0,50,0" Height="180">
                         <TextBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -73,8 +73,8 @@
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Grid.Row="1">
-                    <Label Grid.Column="1" Content ="Vælg høreapparat" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" ></Label>
-                    <ListBox Grid.Column="1" Name="HAList" FontSize="20"  Height ="100" Width="150" HorizontalAlignment="Left" SelectionChanged="HAList_SelectionChanged">
+                    <Label Grid.Column="1" Content ="Vælg høreapparat" FontSize="15" HorizontalAlignment="Left" FontWeight="Bold" ></Label>
+                    <ListBox Grid.Column="1" Name="HAList" FontSize="15"  Height ="100" Width="150" HorizontalAlignment="Left" SelectionChanged="HAList_SelectionChanged">
                         <ListBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -84,15 +84,15 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Grid.Column="2">
-                    <Label Grid.Column="2" Content ="Generelle informationer" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left"></Label>
+                    <Label Grid.Column="2" Content ="Generelle informationer" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left"></Label>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.25*"/>
                             <ColumnDefinition Width="1.25*"/>
                             <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="Type: " FontSize="15" Grid.Column="1"></Label>
-                        <TextBox x:Name="TypeTB" Grid.Column="2" Margin="0,5,5,0" FontSize="15" IsEnabled="False">
+                        <Label Content="Type: "  Grid.Column="1"></Label>
+                        <TextBox x:Name="TypeTB" Grid.Column="2" Margin="0,5,5,0"  IsEnabled="False">
                             <TextBox.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -117,8 +117,8 @@
                             <ColumnDefinition Width="30*"/>
                             <ColumnDefinition Width="139*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="Farve: " FontSize="15" Grid.ColumnSpan="3" Margin="21,0,30,0"/>
-                        <TextBox x:Name="ColorTB" Grid.Column="2" FontSize="15" Margin="0,5,5,0" Background="White" Visibility="Visible" IsEnabled="False" Grid.ColumnSpan="2">
+                        <Label Content="Farve: "  Grid.ColumnSpan="3" Margin="21,0,30,0"/>
+                        <TextBox x:Name="ColorTB" Grid.Column="2"  Margin="0,5,5,0" Background="White" Visibility="Visible" IsEnabled="False" Grid.ColumnSpan="2">
                             <TextBox.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -141,8 +141,8 @@
                             <ColumnDefinition Width="32*"/>
                             <ColumnDefinition Width="137*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="Dato for aftryk: " FontSize="15" Grid.ColumnSpan="3" Margin="21,0,32,0"/>
-                        <TextBox x:Name="GenDateTB" Grid.Column="2" FontSize="15" Margin="0,5,5,0" Grid.ColumnSpan="2" IsEnabled="False">
+                        <Label Content="Dato for aftryk: " Grid.ColumnSpan="3" Margin="21,0,32,0"/>
+                        <TextBox x:Name="GenDateTB" Grid.Column="2"  Margin="0,5,5,0" Grid.ColumnSpan="2" IsEnabled="False">
                             <TextBox.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -151,23 +151,7 @@
                         </TextBox>
                     </Grid>
 
-                    <Label Grid.Column="2" FontSize="20" Content ="Tekniske informationer" FontWeight="Bold" HorizontalAlignment="Left"></Label>
-
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.25*"/>
-                            <ColumnDefinition Width="1.25*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="1" FontSize="15" Content="Dato:"></Label>
-                        <TextBox x:Name="TechDateTB" Grid.Column="2" FontSize="15" Margin="0,5,5,0" IsEnabled="False">
-                            <TextBox.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5 5 5 5"/>
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
-                    </Grid>
+                    <Label Grid.Column="2" FontSize="15" Content ="Tekniske informationer" FontWeight="Bold" HorizontalAlignment="Left"></Label>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -175,8 +159,8 @@
                             <ColumnDefinition Width="1.25*"/>
                             <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="1" Content="Printstatus:" FontSize="15"></Label>
-                        <TextBox x:Name="PrintStatusTB" Grid.Column="2" FontSize="15" Margin="0,5,5,0" IsEnabled="False">
+                        <Label Grid.Column="1" Content="Dato:"></Label>
+                        <TextBox x:Name="TechDateTB" Grid.Column="2" Margin="0,5,5,0" IsEnabled="False">
                             <TextBox.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5 5 5 5"/>
@@ -184,7 +168,23 @@
                             </TextBox.Resources>
                         </TextBox>
                     </Grid>
-                    <Button x:Name="RedigerB" FontSize="20" Content="Rediger" Margin="5" Click="RedigerB_Click">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="1.25*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Content="Printstatus:" ></Label>
+                        <TextBox x:Name="PrintStatusTB" Grid.Column="2"  Margin="0,5,5,0" IsEnabled="False">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5 5 5 5"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+                    <Button x:Name="RedigerB" FontSize="15" Content="Rediger" Margin="5" Click="RedigerB_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5 5 5 5"/>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Presentation_Login"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Name="LoginWindow" x:Class="Presentation_Login.MainWindow"
         mc:Ignorable="d"
-        Title="ClinicianMainWindow" Height="290" Width="800" Closing="LoginWindow_Closing">
+        Title="Viborg Høreklinik" Height="290" Width="800" Closing="LoginWindow_Closing">
     <Grid Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -16,11 +16,11 @@
         </Grid.RowDefinitions>
 
 
-        <TextBox x:Name="MedarbejderIDTB" Text="" TextWrapping="Wrap" BorderBrush="Black" VerticalContentAlignment="Center" Margin="359,98,273,0" Height="26" VerticalAlignment="Top"/>
+        <TextBox x:Name="MedarbejderIDTB" Text="" TextWrapping="Wrap" BorderBrush="Black" VerticalContentAlignment="Center" Margin="368,98,264,0" Height="26" VerticalAlignment="Top"/>
         <Label Content="Staff Id: " Margin="273,95,462,100"/>
 
         <PasswordBox x:Name="PasswordTB" VerticalContentAlignment="Center"
-                 BorderBrush="Black" KeyUp="PasswordTB_KeyUp" Margin="359,129,0,0" HorizontalAlignment="Left" Width="168" Height="26" VerticalAlignment="Top">
+                 BorderBrush="Black" KeyUp="PasswordTB_KeyUp" Margin="368,129,264,0" Width="168" Height="26" VerticalAlignment="Top">
             <PasswordBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5 8 8 5"/>
@@ -29,7 +29,7 @@
         </PasswordBox>
         <Label Content="Password: " Margin="273,132,461,63"/>
 
-        <Button Margin="359,160,273,0" x:Name="logInB" Content="Log in" Click="LoginDB_Click" BorderBrush="Black" FontWeight="Bold" Foreground="White" Height="38" VerticalAlignment="Top">
+        <Button Margin="367,160,265,0" x:Name="logInB" Content="Log in" Click="LoginDB_Click" BorderBrush="Black" FontWeight="Bold" Foreground="White" Height="38" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
