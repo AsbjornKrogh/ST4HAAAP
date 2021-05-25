@@ -25,9 +25,9 @@ namespace BLL_Clinician
             clinicDatabase.CreateNewGeneralSpec(generalSpec);
         }
 
-        public List<GeneralSpec> GetAllHA(string CPR)
+        public List<GeneralSpec> GetAllHA(int PatientID)
        {
-          return clinicDatabase.GetAllGeneralSpecs(Convert.ToInt32(CPR));
+          return clinicDatabase.GetAllGeneralSpecs(PatientID);
        }
 
         public void createEC(EarCast earCast)

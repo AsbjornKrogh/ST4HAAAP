@@ -41,7 +41,7 @@ namespace Presentation_Clinician
 
         private void HAInformationWindow1_Loaded(object sender, RoutedEventArgs e)
         {
-            listGeneralSpecs = _manageHA.GetAllHA(_clinicianMain.Patient.CPR);
+            listGeneralSpecs = _manageHA.GetAllHA(_clinicianMain.Patient.PatientId);
             listGeneralSpecsRight = new List<GeneralSpec>();
             listGeneralSpecsLeft = new List<GeneralSpec>();
 
