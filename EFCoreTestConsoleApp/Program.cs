@@ -17,7 +17,7 @@ namespace EFCoreTestConsoleApp
 
          ProgramHL7 program = new ProgramHL7();
 
-        // program.metode();
+        program.metode();
 
 
          #region Create (CRUD)

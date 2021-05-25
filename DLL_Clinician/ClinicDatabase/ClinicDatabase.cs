@@ -257,7 +257,7 @@ namespace DLL_Clinician
       {
          try
          {
-            _dbContext.EarCast.Attach(earCast);
+            _dbContext.EarCast.Add(earCast);
             _dbContext.SaveChanges();
          }
          catch
