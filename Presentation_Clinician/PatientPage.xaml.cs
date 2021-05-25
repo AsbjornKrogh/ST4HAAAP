@@ -31,8 +31,8 @@ namespace Presentation_Clinician
         {
             InitializeComponent();
 
-            this._clinicianMainWindow = clinicianMainWindow;
-            this.uc2ManagePatient = managePatient;
+            _clinicianMainWindow = clinicianMainWindow;
+            uc2ManagePatient = managePatient;
             patient = clinicianMainWindow.Patient;
 
         }
@@ -59,14 +59,12 @@ namespace Presentation_Clinician
                 patient.MobilNummer = TBPhonenumber.Text;
                 patient.Age = 0;
                 uc2ManagePatient.SaveUpdates(patient);
-                MessageBox.Show("Patientens e-mail og telefonnummer er opdateret");
+                MessageBox.Show("Ændringen er gemt");
                 
             }
 
             TBEmail.IsEnabled = false;
             TBPhonenumber.IsEnabled = false;
-
-
         }
 
         private void PatientPage1_Loaded(object sender, RoutedEventArgs e)
