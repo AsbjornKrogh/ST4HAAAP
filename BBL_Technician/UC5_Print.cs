@@ -40,9 +40,8 @@ namespace BLL_Technician
 
         public bool DBPrint(FullRawEarPrint fullRawEarPrint)
         {
-            //string CPR = fullRawEarPrint.CPR;
-            RawEarPrint print;
-         foreach (RawEarScan rawEarScan in fullRawEarPrint.EarScans)
+           RawEarPrint print;
+           foreach (RawEarScan rawEarScan in fullRawEarPrint.EarScans)
            {
             print = new RawEarPrint();
             print.StaffLoginFK = fullRawEarPrint.PrintTechID;
