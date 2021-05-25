@@ -37,7 +37,7 @@ namespace Presentation_Clinician
             _clinicianMainWindow.LoginOK = false;
             _clinicianMainWindow.RegionLoginOK = false;
 
-            if (true)//(TbCPRnumber.Text.Length == 11 && TbCPRnumber.Text != "           ")
+            if (TbCPRnumber.Text.Length == 11 && TbCPRnumber.Text != "           ")
             {
                 if (_uc2ManagePatient.CheckCPRClinicDatabase(cpr))
                 {
