@@ -8,21 +8,30 @@
         mc:Ignorable="d"
         Title="Viborg Høreklinik" Height="290" Width="800" Closing="LoginWindow_Closing">
     <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="48*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="231*"/>
             <ColumnDefinition Width="619*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="50,0,50,0">
+
+        <Rectangle HorizontalAlignment="Left" Height="40" Stroke="#FFDD863C" VerticalAlignment="Top" Width="800" Fill="#FFDD863C" Grid.ColumnSpan="2"/>
+        <Label Content="Viborg Høreklinik portal" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="{x:Null}" Foreground="White" Grid.ColumnSpan="2"/>
+
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="50,13,50,0" Grid.Row="1">
             <Label Content="Staff Login" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ></Label>
             <Grid>
                 <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 <TextBox x:Name="MedarbejderIDTB" Margin="10,10,10,0" Height="25" Grid.Column="1" Text="" TextWrapping="Wrap" BorderBrush="Black" VerticalContentAlignment="Center"/>
                 <Label Content="Staff Id: " FontSize="15" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid>
+            </Grid>
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*"/>
                     <ColumnDefinition Width="*"/>
@@ -30,36 +39,43 @@
                 <Label Content="Password: " FontSize="15" VerticalAlignment="Center"/>
                 <PasswordBox x:Name="PasswordTB" Margin="10,10,10,0" Height="25"
                          BorderBrush="Black" KeyUp="PasswordTB_KeyUp" Grid.Column="1" >
-                <PasswordBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5 8 8 5"/>
-                    </Style>
-                </PasswordBox.Resources>
-            </PasswordBox>
-        </Grid>
+                    <PasswordBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5 8 8 5"/>
+                        </Style>
+                    </PasswordBox.Resources>
+                </PasswordBox>
+            </Grid>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-               <ColumnDefinition Width="0.5*"/>
-               <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="logInB" Margin="10" Height="25" Content="Log in" Click="LoginDB_Click" BorderBrush="Black" FontWeight="Bold" Foreground="White" Grid.Column="1">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,1" EndPoint="0.1,9">
-                        <GradientStop Color="#FF589CF1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="logInB" Margin="10" Height="25" Content="Log in" Click="LoginDB_Click" BorderBrush="Black" FontWeight="Bold" Foreground="White" Grid.Column="1">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0.1,9">
+                            <GradientStop Color="#FFDD863C"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
 
-        </Grid>
+            </Grid>
 
         </StackPanel>
-        
-        <syncfusion:Clock HorizontalAlignment="Left" Margin="16,18,0,0" VerticalAlignment="Center" Height="190" Width="178"/>
-         </Grid>
+
+        <syncfusion:Clock HorizontalAlignment="Left" Margin="16,16,0,0" VerticalAlignment="Top" Height="190" Width="178" Grid.Row="1" MinuteHandBrush="#FFDD863C" HourHandBrush="#FFDD863C" SecondHandBrush="#FFDD863C" FrameBorderBrush="#FFDD863C" FrameBackground="#FFDD863C">
+            <syncfusion:Clock.AMPMSelectorButtonsBorderBrush>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FFBDD7FD" Offset="1"/>
+                    <GradientStop Color="#FFDD863C"/>
+                </LinearGradientBrush>
+            </syncfusion:Clock.AMPMSelectorButtonsBorderBrush>
+        </syncfusion:Clock>
+    </Grid>
 </Window>
