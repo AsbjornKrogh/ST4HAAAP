@@ -8,13 +8,13 @@ namespace BLL_Clinician
    public class UC3_ManageHA
    {
        private IClinicDatabase clinicDatabase;
-       
-       public UC3_ManageHA()
+
+       public UC3_ManageHA(IClinicDatabase _clinicDatabase)
        {
-           clinicDatabase = new ClinicDatabase();
+           clinicDatabase = _clinicDatabase;
        }
 
-       public List<GeneralSpec> GetHA(int PatientId)
+        public List<GeneralSpec> GetHA(int PatientId)
        {
            return clinicDatabase.GetLatestGeneralSpecs(Convert.ToInt32(PatientId));
 

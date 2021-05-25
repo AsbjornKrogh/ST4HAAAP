@@ -28,32 +28,29 @@ namespace Presentation_Clinician
    public partial class ClinicianMainWindow : Window
    {
 
-       
-       private ClinicDBContext context = new ClinicDBContext();
-       private IClinicDatabase db = new ClinicDatabase();
 
-       UC2_ManagePatient managePatient = new UC2_ManagePatient();
-       UC3_ManageHA manageHA = new UC3_ManageHA();
-       ProcessClinPage processClinPage = new ProcessClinPage();
+       UC2_ManagePatient _managePatient = new UC2_ManagePatient(new ClinicDatabase(), new RegionDatabase());
+       UC3_ManageHA _manageHA = new UC3_ManageHA(new ClinicDatabase());
+
+       private ClinicDBContext context = new ClinicDBContext();
        private UC6_showProcess showProcess;
        private HomeWindow homeWindow;
-     
-       public StaffLogin clinician { set; get; }
 
        public bool LoginOK { get; set; }
        public bool RegionLoginOK { get; set; }
-      // public string PCPR { get; set; }
        public int StaffID { get; set; }
+       public StaffLogin clinician { set; get; }
 
        public Patient Patient;
 
-       Color color1 = Color.FromRgb(237,246,253);
+       Color color1 = Color.FromRgb(237, 246, 253);
        Color color2 = Color.FromRgb(226, 230, 230);
+
 
       public ClinicianMainWindow()
       {
          InitializeComponent();
-         homeWindow = new HomeWindow(this, managePatient);
+         homeWindow = new HomeWindow(this, _managePatient);
          clinician = new StaffLogin();
          Patient = new Patient();
       }
@@ -66,7 +63,7 @@ namespace Presentation_Clinician
 
         private void BtnPatient_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new PatientPage(this, managePatient);
+            Main.Content = new PatientPage(this, _managePatient);
             BtnPatient.Background = new SolidColorBrush(color1);
             BtnStart.Background = new SolidColorBrush(color2);
             BtnHearingAid.Background = new SolidColorBrush(color2);
@@ -87,7 +84,7 @@ namespace Presentation_Clinician
 
         private void BtnHearingAid_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new ManageHAPage(this, manageHA);
+            Main.Content = new ManageHAPage(this, _manageHA);
             BtnPatient.Background = new SolidColorBrush(color2);
             BtnStart.Background = new SolidColorBrush(color2);
             BtnHearingAid.Background = new SolidColorBrush(color1);
@@ -110,20 +107,24 @@ namespace Presentation_Clinician
         public void CheckPatientCPR()
         {
             Hide();
-            homeWindow = new HomeWindow(this, managePatient);
+            homeWindow = new HomeWindow(this, _managePatient);
             homeWindow.ShowDialog();
             homeWindow.TbCPRnumber.Clear();
 
             if (LoginOK || RegionLoginOK)
             {
-                Main.Content = new PatientPage(this, managePatient);
+                BtnPatient.Background = new SolidColorBrush(color1);
+                BtnStart.Background = new SolidColorBrush(color2);
+                BtnHearingAid.Background = new SolidColorBrush(color2);
+                BtnProces.Background = new SolidColorBrush(color2);
+
+                Main.Content = new PatientPage(this, _managePatient);
                 ShowDialog();
             }
-            else 
+            else
             {
                 Close();
             }
         }
-
    }
 }
